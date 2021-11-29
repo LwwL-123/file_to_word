@@ -33,8 +33,8 @@ func read(f fs.FileInfo,dir string) {
 	if !f.IsDir() {
 		// 读取文件名
 		name := f.Name()
-		// 判断是否为java文件
-		if b,_ := regexp.MatchString(".go",name);b {
+		// 反转数组，判断是否为java文件
+		if b,_ := regexp.MatchString("\.go",name);b {
 			fmt.Printf("文件名为:%s\n", name)
 
 			// 读取文件，并写入
